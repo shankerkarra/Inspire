@@ -9,7 +9,6 @@ class ImgsService {
 
   async getImgs() {
     try {
-      debugger;
       const res = await api.get('images/')
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundImage = "url('" + res.data.largeImgUrl + "')";

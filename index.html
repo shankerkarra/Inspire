@@ -53,17 +53,23 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card border-black mb-3" style="max-width: 18rem;">
-                            <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
-                                <p class="card-text" id="Todocount"></p>
+                        <div class="card-group col-xs-3">
+                            <div class="card border-black mb-3" style="max-width: 18rem;">
+                                <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
+                                    <p class="card-text" id="Todocount"></p>
+                                </div>
+                                <div class="card-body col-xs-3" style="max-width: 18rem;">
+                                    <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
+                                    </div>
+                                </div>
+                                <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
+                                    <form onsubmit="app.todosController.addTodo('${this.id}')">
+                                        <input type="text" minlength="3" and maxlength="50" name="todo"
+                                            placeholder="Add Todo..." required>
+                                        <button type="submit" class="btn btn-outline-success">+</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
-                            </div>
-                            <form onsubmit="app.todosController.addTodo('${this.id}')">
-                                <input type="text" minlength="3" and maxlength="50" name="todo"
-                                    placeholder="Add Todo..." required>
-                                <button type="submit" class="btn btn-outline-success">+</button>
-                            </form>
                         </div>
                     </div>
                 </div>
