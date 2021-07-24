@@ -36,45 +36,45 @@
         <div class="clock" id="clock">8:10:45</div>
     </main>
     <footer class="tansparent m-2 p-2">
-        <div class="row">
-            <div class="col">
-                <div class="row" id="Todos">
-                    <div class="col-2">
-                        <p class="imageAuthor"></p>
+        <!-- <div class="row">
+            <div class="col"> -->
+        <div class="row" id="Todos">
+            <div class="col-2">
+                <p class="imageAuthor" id="imageAuthor"></p>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col">
+                        <p class="quoteMsg" id="quoteMsg"></p>
                     </div>
-                    <div class="col-5">
-                        <div class="row">
-                            <div class="col">
-                                <p class="quotemsg"></p>
-                            </div>
-                            <div class="col">
-                                <p class="quote">
+                    <div class="col">
+                        <p class="quoteAuthor" id="quoteAuthor">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card-group col-xs-3">
+                    <div class="card border-black mb-3" style="max-width: 18rem;">
+                        <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
+                            <p class="card-text" id="Todocount"></p>
+                        </div>
+                        <div class="card-body col-xs-3" style="max-width: 18rem;">
+                            <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card-group col-xs-3">
-                            <div class="card border-black mb-3" style="max-width: 18rem;">
-                                <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
-                                    <p class="card-text" id="Todocount"></p>
-                                </div>
-                                <div class="card-body col-xs-3" style="max-width: 18rem;">
-                                    <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
-                                    </div>
-                                </div>
-                                <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
-                                    <form onsubmit="app.todosController.addTodo('${this.id}')">
-                                        <input type="text" minlength="3" and maxlength="50" name="todo"
-                                            placeholder="Add Todo..." required>
-                                        <button type="submit" class="btn btn-outline-success">+</button>
-                                    </form>
-                                </div>
-                            </div>
+                        <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
+                            <form onsubmit="app.todosController.addTodo('${this.id}')">
+                                <input type="text" minlength="3" and maxlength="50" name="todo"
+                                    placeholder="Add Todo..." required>
+                                <button type="submit" class="btn btn-outline-success">+</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- </div>
+        </div> -->
     </footer>
     <script>
         setInterval(showTime, 1000);

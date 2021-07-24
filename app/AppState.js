@@ -9,6 +9,7 @@ class AppState extends EventEmitter {
   //  values = []
   todos = []
   imgs = []
+  activeQuote = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

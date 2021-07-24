@@ -2,7 +2,7 @@ import { imgsService } from "../Services/ImgsService.js"
 
 export default class ImgsController {
   constructor() {
-    //  ProxyState.on(imgs, _drawBgImg)
+
     this.getImgs()
 
   }

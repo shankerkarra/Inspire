@@ -63,7 +63,6 @@ class TodosService {
   }
 
   cntTodo() {
-    //   debugger;
     let totalcount = ProxyState.todos.filter(t => t.id)
     if (totalcount.length == undefined) {
       totalcount = 0;

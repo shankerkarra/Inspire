@@ -15,5 +15,14 @@ main {
   flex-grow: 1;
 }
 
-
-
+.quoteMsg {
+  &:hover{
+    .quoteAuthor {
+      opacity: 1;
+    }
+  }
+  .quoteAuthor {
+    opacity: 0;
+    transition: all .3s linear
+  }
+}
