@@ -2,9 +2,9 @@ import TodosController from "./Controllers/TodosController.js";
 import ImgsController from "./Controllers/imgsController.js";
 
 class App {
-  imgsController = new ImgsController();
-  todosController = new TodosController();
 
+  todosController = new TodosController();
+  imgsController = new ImgsController();
 }
 
 window["app"] = new App();

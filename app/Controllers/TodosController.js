@@ -9,6 +9,8 @@ function _drawAll() {
   let template = ''
   todos.forEach(t => template += t.Template)
   document.getElementById("myTodos").innerHTML = template
+  //Call Function to show the count
+  todosService.cntTodo();
 }
 export default class TodosController {
   constructor() {
@@ -17,7 +19,6 @@ export default class TodosController {
     ProxyState.on('todos', saveState)
     loadState()
     this.getTodos()
-
   }
   async getTodos() {
     try {
@@ -43,7 +44,6 @@ export default class TodosController {
   }
 
   handleChange(e) {
-
     const { checked } = e.target;
     todosService.toggleCheckbox(e.target.id, checked);
   }
@@ -54,4 +54,5 @@ export default class TodosController {
       todosService.delTodo(id)
     }
   }
+
 }

@@ -50,6 +50,42 @@ class TodosService {
     }
     // ProxyState.todos = ProxyState.todos
   }
+
+  async delTodo(id) {
+    try {
+      await api.delete('shankerkarra/todos/' + id)
+        .then(response => { console.log(response.data); })
+      ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+    } catch (error) {
+      console.error("Observed issue in deleting to Sandbox", error)
+    }
+    ProxyState.todos = ProxyState.todos
+  }
+
+  cntTodo() {
+    //   debugger;
+    let totalcount = ProxyState.todos.filter(t => t.id)
+    if (totalcount.length == undefined) {
+      totalcount = 0;
+    }
+    else {
+      totalcount = totalcount.length
+    }
+    let chkcount = ProxyState.todos.filter(t => t.completed === true)
+    if (chkcount.length == undefined) {
+      chkcount = 0;
+    }
+    else {
+      chkcount = chkcount.length
+    }
+    console.log(chkcount + "/" + totalcount)
+    if (totalcount != 0) {
+      document.getElementById("Todocount").innerHTML = chkcount + "/" + totalcount
+    }
+    else {
+      document.getElementById("Todocount").innerHTML = ''
+    }
+  }
 }
 
 export const todosService = new TodosService()

@@ -8,6 +8,7 @@ class AppState extends EventEmitter {
   /** @type {Value[]} */
   //  values = []
   todos = []
+  imgs = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -1,25 +1,21 @@
-import { ProxyState } from "../AppState.js";
 import { api } from "./AxiosService.js";
 
 
 class ImgsService {
 
   constructor() {
-    console.log("SERVICE WORKING")
+    //console.log("Msg at Image constructor")
   }
 
   async getImgs() {
     try {
-      debugger;
       const res = await api.get('images/')
-      //   const res = await api.get('shankerkarra/todos')
-      console.log(res.data);
-      //   ProxyState.imgs = res.data.map(I => new Img(I))
+      // document.body.style.backgroundImage = "url('" + res.data.largeImgUrl + "')";
+      // document.body.style.backgroundRepeat = no - repeat;
     } catch (error) {
       console.error("Encountered error in Fetching Image", error)
     }
   }
-
 
 }
 
