@@ -9,9 +9,11 @@ class ImgsService {
 
   async getImgs() {
     try {
+      debugger;
       const res = await api.get('images/')
-      // document.body.style.backgroundImage = "url('" + res.data.largeImgUrl + "')";
-      // document.body.style.backgroundRepeat = no - repeat;
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundImage = "url('" + res.data.largeImgUrl + "')";
+      //    document.getElementById("imageAuthor").innerHtml = res.data.author
     } catch (error) {
       console.error("Encountered error in Fetching Image", error)
     }

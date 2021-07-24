@@ -18,9 +18,4 @@ export default class Todo {
   `
   }
 
-
-  //  <label class="custom-control-label col-10" for=${this.user}>${this.user}</label> 
-  //   getcount() { }
-
-
 }
