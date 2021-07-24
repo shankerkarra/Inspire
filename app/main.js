@@ -1,7 +1,10 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import TodosController from "./Controllers/TodosController.js";
+import ImgsController from "./Controllers/imgsController.js";
 
 class App {
-  valuesController = new ValuesController();
+  imgsController = new ImgsController();
+  todosController = new TodosController();
+
 }
 
 window["app"] = new App();
