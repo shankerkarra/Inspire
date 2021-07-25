@@ -10705,4 +10705,15 @@ main {
   max-height: 200px;
 }
 
+
+.card_weather{
+  width: 40%;
+  height: 250px;
+  margin: 30px auto;
+}
+
+html, body {
+  height: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
