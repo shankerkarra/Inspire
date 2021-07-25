@@ -26,3 +26,13 @@ main {
     transition: all .3s linear
   }
 }
+
+.card{
+  width: 20%;
+  height: 250px;
+  margin: 30px auto;
+}
+.scrollable{
+  overflow-y: auto;
+  max-height: 200px;
+}

@@ -3,7 +3,6 @@ import { quotesService } from "../Services/QuotesService.js"
 
 
 function _drawActiveQuote() {
-  debugger;
   // if (!ProxyState.activeQuote) {
   document.getElementById('quoteMsg').innerText = ProxyState.activeQuote.content
   document.getElementById('quoteAuthor').innerText = ProxyState.activeQuote.author

@@ -10695,4 +10695,14 @@ main {
   flex-grow: 1;
 }
 
+.card{
+  width: 20%;
+  height: 250px;
+  margin: 30px auto;
+}
+.scrollable{
+  overflow-y: auto;
+  max-height: 200px;
+}
+
 /*# sourceMappingURL=main.css.map */

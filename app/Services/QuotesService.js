@@ -10,7 +10,6 @@ class QuotesService {
 
   async getQuote() {
     try {
-      debugger;
       const res = await api.get('quotes/')
       console.log(res.data)
       ProxyState.activeQuote = new Quote(res.data)
