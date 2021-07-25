@@ -2,18 +2,17 @@ import { ProxyState } from "../AppState.js";
 import Todo from "../Models/Todo.js";
 import { api } from "./AxiosService.js";
 
-
 class TodosService {
 
   constructor() {
-    console.log("SERVICE WORKING")
+    //  console.log("SERVICE WORKING")
   }
 
   async getTodos() {
     try {
       const res = await api.get('shankerkarra/todos/')
       //   const res = await api.get('shankerkarra/todos')
-      console.log(res.data);
+      //   console.log(res.data);
       ProxyState.todos = res.data.map(t => new Todo(t))
     } catch (error) {
       console.error("Encountered error in Fetching Todo", error)
@@ -23,7 +22,7 @@ class TodosService {
     try {
       //  const res = await api.post('shankerkarra/todos', e)
       const res = await api.post('shankerkarra/todos/', e)
-      console.log(res.data);
+      // console.log(res.data);
       ProxyState.todos = [...ProxyState.todos, new Todo(res.data)]
     } catch (error) {
       console.error("Observed issue in writing to Sandbox", error)
@@ -77,7 +76,7 @@ class TodosService {
     else {
       chkcount = chkcount.length
     }
-    console.log(chkcount + "/" + totalcount)
+    // console.log(chkcount + "/" + totalcount)
     if (totalcount != 0) {
       document.getElementById("Todocount").innerHTML = chkcount + "/" + totalcount
     }
