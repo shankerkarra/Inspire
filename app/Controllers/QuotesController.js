@@ -3,11 +3,10 @@ import { quotesService } from "../Services/QuotesService.js"
 
 
 function _drawActiveQuote() {
-  // if (!ProxyState.activeQuote) {
+
   document.getElementById('quoteMsg').innerText = ProxyState.activeQuote.content
   document.getElementById('quoteAuthor').innerText = ProxyState.activeQuote.author
   return
-  // }
 
 }
 export default class QuotesController {
