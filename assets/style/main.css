@@ -10721,6 +10721,7 @@ html, body {
  width: 150px; 
  height: 100px; 
  border:2px solid red;
+ background-color:wheat
 } 
  
 .weatherelement { 
@@ -10752,4 +10753,12 @@ font-size: 18px;
   transform: translate(-50%, -50%);
 }
 
+.quotescard{
+position: absolute;
+top: 10px;
+right: 20px;
+width:300px;
+background-color: rgba(255, 255, 255, 0.5);
+border:2px solid rgba(21, 255, 0, 0.13);
+}
 /*# sourceMappingURL=main.css.map */
