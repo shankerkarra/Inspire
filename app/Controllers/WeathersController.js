@@ -3,10 +3,10 @@ import { weathersService } from "../Services/WeathersService.js"
 
 
 function _drawActiveWeather() {
-  let activeWeather = ProxyState.activeWeather;
-  let template = ''
-  activeWeather.forEach(aw => template += aw.Template)
-  document.getElementById("weather").innerHTML = template
+  // let activeWeather = ProxyState.activeWeather;
+  // let template = "Weather :" + res.data.name + "\n" + "Temp :" + res.data.main.temp + "\n" + "Desc :" + res.data.weather[0].description
+
+  // document.getElementById("weather").innerHTML = template
   return
 }
 export default class WeathersController {
