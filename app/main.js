@@ -5,9 +5,10 @@ import WeathersController from "./Controllers/weathersController.js";
 class App {
 
   todosController = new TodosController();
-  imgsController = new ImgsController();
   quotesController = new QuotesController();
   weathersController = new WeathersController();
+  imgsController = new ImgsController();
+
 }
 
 window["app"] = new App();
