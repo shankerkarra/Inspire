@@ -9,7 +9,7 @@ class WeathersService {
   }
 
   async getWeather() {
-    debugger;
+    // debugger;
     try {
       const res = await api.get('weather/')
       console.log(res.data)
