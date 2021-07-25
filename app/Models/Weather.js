@@ -7,12 +7,11 @@ export default class Weather {
     this.name = data.name
   }
   get Template() {
-    return `
-        <div class="weather">
-        <p>${this.name}</p>
-        p>${this.temp}</p>
-        p>${this.description}</p>
-     </div>
-  `
+    //   return `
+    //      <p>"Weathers: " + ${this.name}</p> +" \n"
+    //       p>"Temp's: " + ${this.temp}</p>  +" \n"
+    //       p>"Desc's: " + ${this.description}</p>
+    //  `
   }
+  // <div class="weather"></div>
 }

@@ -6,7 +6,6 @@ function _drawActiveQuote() {
 
   document.getElementById('quoteMsg').innerText = ProxyState.activeQuote.content
   document.getElementById('quoteAuthor').innerText = ProxyState.activeQuote.author
-  return
 
 }
 export default class QuotesController {

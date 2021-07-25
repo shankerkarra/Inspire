@@ -13,15 +13,12 @@
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>Inspire</title>
-
     <style>
         #clock {
-            font-size: 80px;
-            width: 450px;
-            margin: 350px;
+            font-size: 40px;
             text-align: center;
             border: 1px solid black;
-            border-radius: 10px;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -32,47 +29,49 @@
     <main class="container-fluid">
         <!-- <div class="col-6 card_weather card-transparent m-1 text-right">
          </div> -->
-        <div class="row">
-            <div class="clock" id="clock">8:10:45</div>
+        <div class="weathercard col-md-6">
+            <div class="row" id="Todos">
+                <div class="col-md-6 weatherelement">
+                    <p id="weather"></p>
+                </div>
+            </div>
         </div>
-        <div class="row" id="Todos">
-            <div class="col-sm-2">
-                <p id="weather"></p>
-                <!-- <p class="imageAuthor" id="imageAuthor"></p> -->
-            </div>
-            <div class="col-sm-4">
-                <div class="row">
-                    <div class="col">
-                        <div class="text-center m-5 quoteMsg">
-                            <p class="quoteMsg" id="quoteMsg"></p>
-                            <div class="quoteAuthor">
-                                <p class="quoteAuthor" id="quoteAuthor"></p>
-                            </div>
+        <div class="row centered">
+            <div class="clock" id="clock"> 8:10:45 </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center m-5 quoteMsg">
+                        <p class="quoteMsg" id="quoteMsg"></p>
+                        <div class="quoteAuthor">
+                            <p class="quoteAuthor" id="quoteAuthor"></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card-group col-xs-3" style="height:300px">
-                    <div class="card border-black mb-3" style="max-width:18rem;">
-                        <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
-                            <p class="card-text" id="Todocount"></p>
+        </div>
+        <div class="col-sm-6 bottomright">
+            <div class=" card-group col-xs-3" style="height:300px">
+                <div class="card border-black mb-3" style="max-width:18rem;">
+                    <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
+                        <p class="card-text" id="Todocount"></p>
+                    </div>
+                    <div class="scrollable card-body col-xs-3 overflow-y: auto; max-height: 300px;"
+                        style="max-width: 15rem;">
+                        <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
                         </div>
-                        <div class="scrollable card-body col-xs-3 overflow-y: auto; max-height: 300px;"
-                            style="max-width: 15rem;">
-                            <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
-                            </div>
-                        </div>
-                        <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
-                            <form onsubmit="app.todosController.addTodo('${this.id}')">
-                                <input type="text" minlength="3" and maxlength="50" name="todo"
-                                    placeholder="Add Todo..." required>
-                                <button type="submit" class="btn btn-outline-success">+</button>
-                            </form>
-                        </div>
+                    </div>
+                    <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
+                        <form onsubmit="app.todosController.addTodo('${this.id}')">
+                            <input type="text" minlength="3" and maxlength="50" name="todo" placeholder="Add Todo..."
+                                required>
+                            <button type="submit" class="btn btn-outline-success">+</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <footer>
         </footer>

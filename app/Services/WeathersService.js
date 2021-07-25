@@ -13,8 +13,8 @@ class WeathersService {
     try {
       const res = await api.get('weather/')
       console.log(res.data)
-      //    ProxyState.activeWeather = new Weather(res.data)
-      let template = "Weather :" + res.data.name + "\n" + "Temp :" + res.data.main.temp + "\n" + "Desc :" + res.data.weather[0].description
+      ProxyState.activeWeather = new Weather(res.data)
+      let template = "" + res.data.name + "\n" + "" + res.data.main.temp + "\n" + res.data.weather[0].description
       document.getElementById("weather").innerHTML = template
 
     } catch (error) {
