@@ -40,9 +40,8 @@
         </div> -->
         <div class="card-deck-wrapper weathercard col-md-6 ">
             <div class="card-deck">
-                <div class="p-1 col-md-6 weatherelement">
-                    <a class="card-block stretched-link text-decoration-none"
-                        href="javascript:findCelsius(weathertemp.value)">
+                <div class="col-12">
+                    <a class="card-block stretched-link text-decoration-none" href="javascript:findCelsius(event)">
                         <p id="weathercity"></p>
                         <p id="weatherdesc"></p>
                         <p id="weathertemp"></p>
@@ -60,8 +59,7 @@
                     <div class="text-center m-1 quoteMsg">
                         <p class="quoteMsg" id="quoteMsg"></p>
                         <div class="quoteAuthor">
-                            <p class="quoteAuthor" id="quoteAuthor" 
-                            ${exists ? 'disabled' : ''}></p>
+                            <p class="quoteAuthor" id="quoteAuthor" ${exists ? 'disabled' : '' }></p>
                         </div>
                     </div>
                 </div>
@@ -74,11 +72,11 @@
                         <p class="card-text" id="Todocount"></p>
                     </div>
                     <div class="scrollable card-body col-xs-3 overflow-y: auto; max-height: 300px;"
-                        style="max-width: 15rem;">
-                        <div class="m-2 p-2 text-overflow: ellipsis break-word" id="myTodos">
+                        style="max-width: 18rem; ">
+                        <div class="text-overflow: ellipsis break-word text-align:left" id="myTodos">
                         </div>
                     </div>
-                    <div class="card-footer col-xs-3 p-3" style="max-width: 18rem;">
+                    <div class="card-footer col-xs-3 p-3">
                         <form onsubmit="app.todosController.addTodo('${this.id}')">
                             <input type="text" minlength="3" and maxlength="50" name="todo" placeholder="Add Todo..."
                                 required>
@@ -117,8 +115,8 @@
         showTime();
     </script>
     <script>
-        function findCelsius(temp) {
-            alert(temp);
+        function findCelsius(event) {
+            alert(event);
             alert(document.getElementById('weathercity').value)
             var ctemp = document.getElementById('weathertemp').value;
             if (ctemp == NaN) {
