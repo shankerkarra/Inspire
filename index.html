@@ -27,13 +27,27 @@
 <body>
     <header>
     </header>
-    <main class="container-fluid">
+    <main class="container">
         <!-- <div class="col-6 card_weather card-transparent m-1 text-right">
          </div> -->
-        <div class="weathercard col-md-6 stretched-link">
+        <!-- <div class="weathercard col-md-6 ">
             <div class="row" id="WeatherTodos">
                 <div class="col-md-6 weatherelement">
+                    <a class="card-block stretched-link text-decoration-none" href></a>
                     <p id="weather"></p>
+                </div>
+            </div>
+        </div> -->
+        <div class="card-deck-wrapper weathercard col-md-6 ">
+            <div class="card-deck">
+                <div class="p-1 col-md-6 weatherelement">
+                    <a class="card-block stretched-link text-decoration-none"
+                        href="javascript:findCelsius(weathertemp.value)">
+                        <p id="weathercity"></p>
+                        <p id="weatherdesc"></p>
+                        <p id="weathertemp"></p>
+                        <p id="weathertemptype"></p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -43,19 +57,20 @@
         <div class="col-sm-4 quotescard">
             <div class="row">
                 <div class="col">
-                    <div class="text-center m-5 quoteMsg">
+                    <div class="text-center m-1 quoteMsg">
                         <p class="quoteMsg" id="quoteMsg"></p>
                         <div class="quoteAuthor">
-                            <p class="quoteAuthor" id="quoteAuthor"></p>
+                            <p class="quoteAuthor" id="quoteAuthor" 
+                            ${exists ? 'disabled' : ''}></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 bottomright">
-            <div class=" card-group col-xs-3" style="height:300px">
+            <div class="card-group col-xs-3" style="height:300px">
                 <div class="card border-black mb-3" style="max-width:18rem;">
-                    <div class="card-header text-center ${this.color}" id="shankertodo">Shanker's Todo
+                    <div class="card-header ${this.color}" id="shankertodo">Shanker's Todo
                         <p class="card-text" id="Todocount"></p>
                     </div>
                     <div class="scrollable card-body col-xs-3 overflow-y: auto; max-height: 300px;"
@@ -100,6 +115,24 @@
             document.getElementById("clock").innerHTML = currentTime;
         }
         showTime();
+    </script>
+    <script>
+        function findCelsius(temp) {
+            alert(temp);
+            alert(document.getElementById('weathercity').value)
+            var ctemp = document.getElementById('weathertemp').value;
+            if (ctemp == NaN) {
+                if (ctemp = 'F') {
+                    celsius = (ctemp - 32) * 5 / 9;
+                    document.getElementById('weathertemp').innerHTML = celsius;
+                    document.getElementById('weathertemptype').innerHTML = "C"
+                } else {
+                    fahrenheit = (ctemp + 32) * 9 / 5;
+                    document.getElementById('weathertemp').innerHTML = fahrenheit;
+                    document.getElementById('weathertemptype').innerHTML = "F"
+                }
+            }
+        }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="

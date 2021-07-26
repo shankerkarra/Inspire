@@ -14,8 +14,10 @@ class WeathersService {
       const res = await api.get('weather/')
       console.log(res.data)
       ProxyState.activeWeather = new Weather(res.data)
-      let template = "" + res.data.name + "\n" + "" + res.data.main.temp + "\n" + res.data.weather[0].description
-      document.getElementById("weather").innerHTML = template
+      document.getElementById("weathercity").innerHTML = res.data.name
+      document.getElementById("weatherdesc").innerHTML = res.data.weather[0].description
+      document.getElementById("weathertemp").innerHTML = res.data.main.temp
+      document.getElementById("weathertemptype").innerHTML = 'F'
 
     } catch (error) {
       console.error("Encountered error in Fetching Weather", error)

@@ -10718,8 +10718,8 @@ html, body {
 
 .weathercard { 
  position: relative; 
- width: 150px; 
- height: 100px; 
+ width: 200px; 
+ height: 150px; 
  border:2px solid red;
  background-color:wheat
 } 
@@ -10742,8 +10742,8 @@ font-size: 18px;
 
 .bottomright {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 3px;
+  right: 3px;
 }
 
 .centered {
@@ -10755,10 +10755,25 @@ font-size: 18px;
 
 .quotescard{
 position: absolute;
-top: 10px;
-right: 20px;
+top: 2px;
+right:20px;
+height:150px;
 width:300px;
 background-color: rgba(255, 255, 255, 0.5);
 border:2px solid rgba(21, 255, 0, 0.13);
 }
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.quoteMsg:hover .quoteAuthor {
+  opacity: 1;
+}
+.quoteMsg .quoteAuthor {
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
 /*# sourceMappingURL=main.css.map */
