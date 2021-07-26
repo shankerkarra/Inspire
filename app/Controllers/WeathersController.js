@@ -23,8 +23,11 @@ export default class WeathersController {
       console.error("Encountered error in Fetching Weather", error)
     }
   }
-  handleChange(e) {
-    console.log(e)
+  handleChange(Temp, temptype) {
+    debugger;
+    event.preventDefault;
+    let form = event.target;
+    console.log(form)
     // const { checked } = e.target;
     // todosService.toggleCheckbox(e.target.id, checked);
   }
