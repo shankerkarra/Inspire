@@ -1,7 +1,7 @@
 import TodosController from "./Controllers/TodosController.js";
-import ImgsController from "./Controllers/imgsController.js";
+import ImgsController from "./Controllers/ImgsController.js";
 import QuotesController from "./Controllers/QuotesController.js";
-import WeathersController from "./Controllers/weathersController.js";
+import WeathersController from "./Controllers/WeathersController.js";
 class App {
 
   todosController = new TodosController();
